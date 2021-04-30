@@ -1,0 +1,16 @@
+{
+	"name" : "alejo-lespaul/jwt",
+	"description" : "Jwt Integration for laravel",
+	"type" : "library",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Alejandro Furgeri",
+			"email" : "alesitoman@gmail.com"
+		}
+	],
+	"minimum-stability" : "dev",
+	"require": {
+		"laravel/framework" : "^8.12",
+		"firebase/php-jwt" : "^5.2"
+	}
+}
