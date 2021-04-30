@@ -13,7 +13,8 @@ JWT_SERVICE_KEY="ASecretKey"
 
 #### Create Token
 ```
-
+use Jwt\Facade\JwtFacade as Jwt;
+...
 $token = Jwt::signIn([
 	"id" => 1
 	"username" => "john wick"
@@ -25,12 +26,18 @@ $token = Jwt::signIn([
 
 #### Get Data From Token
 ```
+use Jwt\Facade\JwtFacade as Jwt;
+...
+
 $data = Jwt::getData($token);
 # Return an array or throw an exception if the token is not valid
 ```
 
 #### Ask if a token is valid
 ```
+use Jwt\Facade\JwtFacade as Jwt;
+...
+
 $boolean = Jwt::isValid($token);
 # Return true o false
 ```
