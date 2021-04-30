@@ -11,20 +11,26 @@
 	"minimum-stability" : "dev",
 	"autoload" : {
 		"psr-4" : {
-			"App\\" : "app/",
-			"Database\\Factories\\" : "database/factories/",
-			"Database\\Seeders\\" : "database/seeders/",
-			"Jwt\\" : "modules/Jwt/src"
+			"Jwt\\" : "src/"
 		}
 	},
 	"autoload-dev" : {
 		"psr-4" : {
-			"Tests\\" : "tests/",
-			"Jwt\\Tests\\" : "modules/Jwt/tests/"
+			"Jwt\\Tests\\" : "tests/"
 		}
 	},
 	"require" : {
 		"laravel/framework" : "^8.12",
 		"firebase/php-jwt" : "^5.2"
+	},
+	"extra" : {
+		"laravel" : {
+			"providers" : [
+				"Jwt\\Provider\\JwtProvider"
+			]
+		}, 
+		"aliases": {
+            "Jwt": "Jwt\\Facade\\JwtFacade"
+        }
 	}
 }
